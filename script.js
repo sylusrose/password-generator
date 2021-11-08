@@ -5,7 +5,7 @@ var confirmChar;
 var confirmUpper;
 var confirmLower;
 var choices;
-character = ["!", "@", "#", "$", "%", "%", "^", "&", "*", "(", ")", "[", "]"];
+character = ["!", "@", "#", "$", "%", "%", "^", "&", "*", "(", ")", "[", "]", "~", "<", ">"];
 number = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 alpha = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 upperAlpha = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
@@ -22,7 +22,7 @@ function writePassword() {
 }
 
 function generatePassword(){
-  enter = window.prompt("How many characters would you limke your password to be? Please choose between 8 & 128");
+  enter = window.prompt("How many characters would you like your password to be? Please choose between 8 & 128");
   if(!enter){
     alert("Please enter Value")
   }
@@ -93,12 +93,12 @@ function generatePassword(){
     var pickChoices = choices[Math.floor(Math.random() * choices.length)];
     password.push(pickChoices);  
   }
-  var ps = password.join("");
-    UserInput(ps);
-    return ps;
+  var psswrd = password.join("");
+    UserInput(psswrd);
+    return psswrd;
 }
-function UserInput(ps) {
-  document.getElementById("password").textContent = ps;
+function UserInput(psswrd) {
+  document.getElementById("password").textContent = psswrd;
 
 }
 
